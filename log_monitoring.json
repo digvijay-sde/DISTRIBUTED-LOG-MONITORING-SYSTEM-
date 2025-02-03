@@ -1,0 +1,18 @@
+{
+  "dashboard": {
+    "title": "Log Monitoring Dashboard",
+    "panels": [
+      {
+        "title": "Log Entries by Service",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "log_entries_total",
+            "legendFormat": "{{service}}",
+            "refId": "A"
+          }
+        ]
+      }
+    ]
+  }
+}

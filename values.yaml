@@ -1,0 +1,12 @@
+replicaCount: 3
+image:
+  repository: your-docker-repo/log-monitoring-service
+  tag: latest
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  ports:
+    http: 8080
+    grpc: 50051
+env:
+  database_url: postgres://user:password@db:5432/log_monitoring
